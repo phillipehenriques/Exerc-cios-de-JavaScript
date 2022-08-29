@@ -46,7 +46,7 @@ var ret = pessoas.map(x => {
 })
 
 pessoas.forEach(x => {
-    if("parametro que o cara mandou no terminal" == "bolo") {
+    if ("parametro que o cara mandou no terminal" == "bolo") {
         console.log(x.sobreBolo)
     }
 })
@@ -57,11 +57,11 @@ console.log(Carlos.sobreBolo)
 
 console.log(opiniaoSobreBolo)
 
-function map(callbackfn) {
-    var batata = callbackfn.execute();
-    return batata
-}
+// function map(callbackfn) {
+//     var batata = callbackfn.execute();
+//     return batata
+// }
 
-function forEach(callbackfn) {
-   callbackfn.execute();
-}
+// function forEach(callbackfn) {
+//    callbackfn.execute();
+// }
