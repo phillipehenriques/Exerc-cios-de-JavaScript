@@ -1,26 +1,26 @@
 class ControleCarro {
-    constructor(ecoSport) {
-        this.carro = 'ecoSport'
+    constructor(modelo) {
+        this.modelo = modelo
         this.fechadura = 0        
     }
 
-    destrancado() {
-        this.fechadura = console.log(`Esse ${this.carro} está destrancado.`)
-    }
-
-    trancado() {
-        this.fechadura = console.log(`Esse ${this.carro} está trancado.`)
+    trancarOuDestrancar(trancado) {
+        if(trancado === true) {
+            console.log(`O carro ${this.modelo} está trancado`)
+        } else {
+            console.log(`O carro ${this.modelo} está destrancado`)
+        }
     }
 
     alarme() {
-        this.alarme = console.log(`Esse ${this.carro} está sendo roubado.`)
+           console.log(`Esse ${this.carro} está sendo roubado.`) 
+        // se não colocar o NEW ele não consegue acessar o constructor < e não consegue puxar nenhum método dentro da classe.
     }
 }
 
-const meuCarro = new ControleCarro
+const meuCarro = new ControleCarro('ecoSport')
 
-meuCarro.destrancado()
-meuCarro.trancado()
-meuCarro.alarme()
 
-console.log(meuCarro.destrancado)
+meuCarro.trancarOuDestrancar(true)
+
+

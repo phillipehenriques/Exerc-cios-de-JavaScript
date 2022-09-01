@@ -1,21 +1,17 @@
-class ControleRemoto {
-    constructor(tv) {
-        this.tv = tv
-        this.volume = 0
+class Cachorro {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
     }
 
-    aumentarVolume() {
-        this.volume += 2
+    latir() {
+        return 'au au'
     }
-    diminuirVolume() {
-        this.volume -= 2
+    rolar() {
+        return 'rolando'
     }
 }
 
-const controle1 = new ControleRemoto
+const maya = new Cachorro('Maya', 2)
 
-controle1.aumentarVolume();
-controle1.aumentarVolume();
-controle1.aumentarVolume();
-
-console.log(controle1)
+console.log(maya.latir())
