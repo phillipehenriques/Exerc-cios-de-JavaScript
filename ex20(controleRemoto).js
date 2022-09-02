@@ -1,17 +1,43 @@
-class Cachorro {
-    constructor(nome, idade) {
-        this.nome = nome
-        this.idade = idade
+class ControleRemoto {
+    constructor(tv) {
+        this.tv = tv
+        this.volume = 0
+        this.canal = 1
     }
 
-    latir() {
-        return 'au au'
+    aumentarVolume() {
+        this.volume += 1
     }
-    rolar() {
-        return 'rolando'
+
+    diminuirVolume() {
+        this.volume -= 1
+    }
+
+    deixarMudo() {
+        this.volume = 0
+    }
+
+    trocarCanalParaFrente() {
+        this.canal += 1
+    }
+
+    trocarCanalParaTrás() {
+        this.canal -= 1
+    }
+
+    abrirMenu() {
+        console.log(`A tv de marca ${this.tv} está no menu`)
     }
 }
 
-const maya = new Cachorro('Maya', 2)
+const controleSlim = new ControleRemoto('LG')
 
-console.log(maya.latir())
+controleSlim.trocarCanalParaFrente()
+controleSlim.trocarCanalParaFrente()
+controleSlim.trocarCanalParaFrente()
+controleSlim.aumentarVolume()
+controleSlim.aumentarVolume()
+controleSlim.deixarMudo()
+
+console.log(controleSlim)
+
