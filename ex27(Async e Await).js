@@ -6,7 +6,8 @@ function  aleatorio(min = 0, max = 3) {
 
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
-    setTimeout(() => {
+    
+        setTimeout(() => {
         if(typeof msg !== 'string') {
             reject('CAI NO ERRO')
             return
@@ -21,18 +22,20 @@ function esperaAi(msg, tempo) {
 async function executa() {
     try {
         const fase1 = await esperaAi('Fase1', aleatorio())
-    console.log(fase1)
+        console.log(fase1)
 
-    const fase2 = await esperaAi('Fase2', aleatorio())
-    console.log(fase2)
+        const fase2 = await esperaAi('Fase2', aleatorio())
+        console.log(fase2)
 
-    const fase3 = await esperaAi('Fase3', aleatorio())
-    console.log(fase3)
+        const fase3 = await esperaAi('Fase3', aleatorio())
+        console.log(fase3)
 
-    console.log('Teminamos na fase:', fase3)
+        console.log('Teminamos na fase:', fase3)
     } catch(error) {
         console.log(error)
     }
 }
 
 executa()
+
+console.log('Isso vem antes')

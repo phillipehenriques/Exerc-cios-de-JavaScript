@@ -29,7 +29,7 @@ esperaAi('Fase 1', aleatorio())
     })
     .then(fase => {
         console.log(fase)
-        return fase
+        return esperaAi('Pipoca', aleatorio())
     })
     .then(fase => {
         console.log('Terminamos na fase', fase)
