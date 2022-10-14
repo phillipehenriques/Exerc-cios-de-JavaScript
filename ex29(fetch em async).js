@@ -18,3 +18,5 @@ function carregaResultado(response) {
 }
 
 // EXEMPLO de fetch em um async
+
+``
